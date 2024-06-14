@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-fluid {
+    max-width: 1320px;
+}
+
+.clouds, .sunny, .rainy {
+    width: 70px;
+}
+
+h4.flex-grow-1 {
+    color:chocolate;
+}
+
+main {
+    background-color: azure;
+    flex: 1;
+}
+
+.abc, footer{
+    background-color:steelblue;
+}
+
+a.navbar-brand, span.navbar-toggler-icon, button.btn {
+    color: white !important;
+}
+
+.bi-list-ul {
+    font-size: 20px;
+}
