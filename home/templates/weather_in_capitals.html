@@ -1,0 +1,257 @@
+{% extends 'homepage.html' %}
+{% load static %}
+
+{% comment %} {% block extra_css %}
+    <!-- CSS specific to weather in capitals page -->
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+{% endblock %} {% endcomment %}
+
+{% block content %}
+
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-3 d-flex justify-content-center">
+        
+            <!--card 1-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">BUCHAREST</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.bucharest %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.bucharest.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.bucharest.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.bucharest.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.bucharest.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.bucharest.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.bucharest.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.bucharest.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.bucharest.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!--card 2-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">LONDON</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.london %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.london.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.london.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.london.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.london.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.london.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.london.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.london.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.london.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            <!--card 3-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">MADRID</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.madrid %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.madrid.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.madrid.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.madrid.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.madrid.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.madrid.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.madrid.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.madrid.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.madrid.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!--card 4-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">PARIS</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.paris %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.paris.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.paris.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.paris.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.paris.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.paris.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.paris.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.paris.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.paris.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!--card 5-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">BERLIN</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.berlin %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.berlin.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.berlin.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.berlin.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.berlin.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.berlin.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.berlin.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.berlin.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.berlin.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!--card 6-->
+            <div class="card p-4 mx-4" style="border-radius: 35px;">
+                <div class="d-flex">
+                    <h4 class="flex-grow-1">COPENHAGEN</h4>
+                    <h6>TIME</h6>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-5">
+                    {% if weather_data.copenhagen %}
+                        <h6 class="display-4 mb-0 font-weight-bold"> {{ weather_data.copenhagen.temperature}}°C </h6>
+                        <span class="small" style="color: #868B94">{{ weather_data.copenhagen.weather.title}}</span>
+                    {% endif %}
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div>
+                            <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                            <span>Max Temp: {{ weather_data.copenhagen.max_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                            <span>Min Temp: {{ weather_data.copenhagen.min_temp }}°C</span>
+                        </div>
+                        <div>
+                            <i class="bi-droplet-half" style="font-size:15px;"></i>
+                            <span>Humidity: {{ weather_data.copenhagen.humidity }}%</span>
+                        </div>
+                    </div>
+                    <div>
+                        {% if weather_data.copenhagen.weather in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data.copenhagen.weather in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data.copenhagen.weather in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    {% endblock %}

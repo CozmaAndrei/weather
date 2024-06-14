@@ -1,0 +1,11 @@
+{% extends 'homepage.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <!-- CSS specific to city weather page -->
+    <link rel="stylesheet" href="{% static 'cityweather.css' %}">
+{% endblock %}
+
+{% block content %}
+    {{temperature}}
+{% endblock %}
