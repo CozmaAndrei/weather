@@ -1,8 +1,9 @@
 import requests
 from datetime import datetime
+from decouple import config
 
 def get_weather(city):
-    API_KEY = 'ed7eb50b2d1d8ed53e4627829cf38ee2'
+    API_KEY = config('API_KEY_get_weather')
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
     try:
         status = requests.get(url).json()
