@@ -7,7 +7,6 @@ def get_weather(city):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
     try:
         status = requests.get(url).json()
-        print(status)
         data = status['weather'][0]['description']
         temperature = round(status['main']['temp'] - 273.15, 1)
         min_temp = round(status['main']['temp_min'] - 273.15, 1)
@@ -15,11 +14,12 @@ def get_weather(city):
         humidity = status['main']['humidity']
         sunrise_unix = status['sys']['sunrise']
         sunrise_time = datetime.fromtimestamp(sunrise_unix).strftime('%H:%M')
-        return data, temperature, min_temp, max_temp, sunrise_time, humidity
-        # return data
-    except Exception as e:
+        day = status['dt']
+        actual_day = datetime.fromtimestamp(day).strftime('%A')
+        return data, temperature, min_temp, max_temp, sunrise_time, humidity, actual_day
+    except Exception:
         return None
 
-if __name__ == "__main__":
-    city = input()
-    get_weather(city)
+# if __name__ == "__main__":
+#     city = input()
+#     get_weather(city)
