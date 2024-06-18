@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from weather import get_weather
+from weather_next_days import get_weather_next_days, get_min_temp_max_temp
 from datetime import datetime
 from .forms import SearchForm
 
@@ -66,18 +67,34 @@ def get_cities_weather(request):
     if search_form.is_valid():
         city = search_form.cleaned_data['search_city']
         weather_data = get_weather(city)
-        
+        weather_data_next_days = get_weather_next_days(city)
+        max_temp_min_temp = get_min_temp_max_temp(city)
         weather_conditions = get_weather_conditions()
         
         context = {
             'city': city,
             'search_form': search_form,
+            'weather_data_next_days': weather_data_next_days[0] if weather_data_next_days else None,
+            'day1': weather_data_next_days[1] if weather_data_next_days else None,
+            'day2': weather_data_next_days[2] if weather_data_next_days else None,
+            'day3': weather_data_next_days[3] if weather_data_next_days else None,
+            
+            'min_temp_a_day_after': max_temp_min_temp[0] if max_temp_min_temp else None,
+            'max_temp_a_day_after': max_temp_min_temp[1] if max_temp_min_temp else None,
+            'min_temp_two_days_after': max_temp_min_temp[2] if max_temp_min_temp else None,
+            'max_temp_two_days_after': max_temp_min_temp[3] if max_temp_min_temp else None,
+            'min_temp_three_days_after': max_temp_min_temp[4] if max_temp_min_temp else None,
+            'max_temp_three_days_after': max_temp_min_temp[5] if max_temp_min_temp else None,
+            
+            
+            
             'weather_data': weather_data[0] if weather_data else None,
             'temperature': weather_data[1] if weather_data else None,
             'min_temp': weather_data[2] if weather_data else None,
             'max_temp': weather_data[3] if weather_data else None,
             'sunrise_time': weather_data[4] if weather_data else None,
             'humidity': weather_data[5] if weather_data else None,
+            'actual_day': weather_data[6] if weather_data else None,
             'current_time': datetime.now().strftime("%H:%M"),
             'current_data': datetime.now().strftime("%Y-%m-%d"),
             **weather_conditions,

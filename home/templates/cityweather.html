@@ -2,10 +2,103 @@
 {% load static %}
 
 {% block extra_css %}
-    <!-- CSS specific to city weather page -->
-    <link rel="stylesheet" href="{% static 'cityweather.css' %}">
+<!-- CSS specific to city weather page -->
+<link rel="stylesheet" href="{% static 'cityweather.css' %}">
 {% endblock %}
 
 {% block content %}
-    {{temperature}}
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-3 d-flex justify-content-center">
+        <!--card-->
+        <div class="card p-4 mx-4" style="border-radius: 35px;">
+            <div class="topinfo">
+                <h4>{{city}}</h4>
+                <h6>{{actual_day}}</h6>
+            </div>
+            <div class="d-flex flex-column text-center mt-5 mb-5">
+                {% if weather_data %}
+                <h6 class="display-4 mb-0 font-weight-bold"> {{ temperature}}°C </h6>
+                <span class="small" style="color: #868B94">{{ weather_data.title}}</span>
+                {% endif %}
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <div class="flex-grow-1" style="font-size: 1rem;">
+                    <div>
+                        <i class="bi-thermometer-high" style="font-size:15px;"></i>
+                        <span>Max Temp: {{ max_temp }}°C</span>
+                    </div>
+                    <div>
+                        <i class="bi-thermometer-low" style="font-size:15px;"></i>
+                        <span>Min Temp: {{ min_temp }}°C</span>
+                    </div>
+                    <div>
+                        <i class="bi-droplet-half" style="font-size:15px;"></i>
+                        <span>Humidity: {{ humidity }}%</span>
+                    </div>
+                </div>
+                <div>
+                    {% if weather_data in weather_condition_sunny %}
+                    <img class="sunny" src="{% static 'images/sun.png'%}" >
+                    {% elif weather_data in weather_condition_rainy %}
+                    <img class="rainy" src="{% static 'images/rain.png'%}" >
+                    {% elif weather_data in weather_condition_clouds %}
+                    <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                    {% endif %}
+                </div>
+            </div>
+            <!--card end-->
+
+            <!--line-->
+            <div class="bg-dark w-100 mb-3" style="height: 1px;"></div>
+            <!--line end-->
+
+            <!--weather on next days-->
+            <div class="nextdaysweather">
+                <!--day1-->
+                {% if weather_data_next_days%}
+                <div>
+                    <h6 class="p-2">{{day1}}</h6>
+                    <p>{{min_temp_a_day_after}} / {{max_temp_a_day_after}}°C</p>
+                    {% if weather_data in weather_condition_sunny %}
+                        <img class="sunny" src="{% static 'images/sun.png'%}" >
+                    {% elif weather_data in weather_condition_rainy %}
+                        <img class="rainy" src="{% static 'images/rain.png'%}" >
+                    {% elif weather_data in weather_condition_clouds %}
+                        <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                    {% endif %}
+                </div>
+                {% endif %}
+                <!--day2-->
+                {% if weather_data_next_days%}
+                <div>
+                    <h6 class="p-2">{{day2}}</h6>
+                    <p>{{min_temp_two_days_after}} / {{max_temp_two_days_after}}°C</p>
+                    {% if weather_data in weather_condition_sunny %}
+                        <img class="sunny" src="{% static 'images/sun.png'%}" >
+                    {% elif weather_data in weather_condition_rainy %}
+                        <img class="rainy" src="{% static 'images/rain.png'%}" >
+                    {% elif weather_data in weather_condition_clouds %}
+                        <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                    {% endif %}
+                </div>
+                {% endif %}
+                <!--day3-->
+                {% if weather_data_next_days%}
+                <div class="">
+                    <h6 class="p-2">{{day3}}</h6>
+                    <p>{{min_temp_three_days_after}} / {{max_temp_three_days_after}}°C</p>
+                    {% if weather_data in weather_condition_sunny %}
+                        <img class="sunny" src="{% static 'images/sun.png'%}" >
+                    {% elif weather_data in weather_condition_rainy %}
+                        <img class="rainy" src="{% static 'images/rain.png'%}" >
+                    {% elif weather_data in weather_condition_clouds %}
+                        <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            <!--weather on 7 days end-->
+        </div>
+    </div>
+</div>
 {% endblock %}
