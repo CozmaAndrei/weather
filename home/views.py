@@ -43,17 +43,21 @@ def get_static_cities_weather():
     
     for key, city in cities.items():
         data = get_weather(city)
+        get_actual_time = get_sunrise_and_sunset(city)
         weather_data[key] = {
             'weather': data[0] if data else None,
             'temperature': data[1] if data else None,
             'min_temp': data[2] if data else None,
             'max_temp': data[3] if data else None,
             'humidity': data[4] if data else None,
+            'actual_time': get_actual_time[2] if get_actual_time else None,
         }
     
     weather_conditions = get_weather_conditions()
+    
 
     context = {
+        
         'weather_data': weather_data,
         'search_form': search_form,
         **weather_conditions,
@@ -100,8 +104,8 @@ def get_cities_weather(request):
             'sunset_time': sunrise_and_sunset_time[1] if sunrise_and_sunset_time else None,
             'actual_time': sunrise_and_sunset_time[2] if sunrise_and_sunset_time else None,
             
-            'current_time': datetime.now().strftime("%H:%M"),
-            'current_data': datetime.now().strftime("%Y-%m-%d"),
+            # 'current_time': datetime.now().strftime("%H:%M"),
+            # 'current_data': datetime.now().strftime("%Y-%m-%d"),
             **weather_conditions,
         }
         return render(request, 'cityweather.html', context)

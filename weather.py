@@ -26,10 +26,9 @@ def get_sunrise_and_sunset(city):
         status = requests.get(url).json()
         sunrise_unix = status['sys']['sunrise']
         sunset_unix = status['sys']['sunset']
+        daytime_unix = status['dt']
         lat = status['coord']['lat']
         lon = status['coord']['lon']
-        daytime = status['dt']
-        actual_time = datetime.fromtimestamp(daytime).strftime('%H:%M')
         tf = TimezoneFinder()
         timezone_str = tf.timezone_at(lat=lat, lng=lon)
         if timezone_str is None:
@@ -38,13 +37,15 @@ def get_sunrise_and_sunset(city):
         local_timezone = pytz.timezone(timezone_str)
         sunrise_utc = datetime.fromtimestamp(sunrise_unix)
         sunset_utc = datetime.fromtimestamp(sunset_unix)
+        time_utc = datetime.fromtimestamp(daytime_unix)
         sunrise_time = sunrise_utc.astimezone(local_timezone).strftime('%H:%M')
         sunset_time = sunset_utc.astimezone(local_timezone).strftime('%H:%M')
+        actual_time = time_utc.astimezone(local_timezone).strftime('%H:%M')
         return sunrise_time, sunset_time, actual_time
     except Exception:
         return None
     
-if __name__ == "__main__":
-    city = input()
-    get_weather(city)
-    get_sunrise_and_sunset(city)
+# if __name__ == "__main__":
+#     city = input()
+#     get_weather(city)
+#     get_sunrise_and_sunset(city)
