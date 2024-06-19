@@ -12,8 +12,12 @@
         <!--card-->
         <div class="card p-4 mx-4" style="border-radius: 35px;">
             <div class="topinfo">
-                <h4>{{city.upper}}</h4>
-                <h6>{{actual_day}} {{actual_time}}</h6>
+                <div>
+                    <h4>{{city.upper}}</h4>
+                </div>
+                <div>
+                    <h6><i class="bi-clock"></i> {{actual_time}}</h6>
+                </div>
             </div>
             <div class="d-flex flex-column text-center mt-5 mb-5">
                 {% if weather_data %}

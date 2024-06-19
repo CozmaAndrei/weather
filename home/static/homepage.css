@@ -41,3 +41,15 @@ a.navbar-brand, span.navbar-toggler-icon, button.btn {
 .bi-list-ul {
     font-size: 20px;
 }
+
+.righttopnavbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.righttopnavbar>p {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    color:white;
+}

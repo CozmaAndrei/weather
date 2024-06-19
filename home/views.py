@@ -54,10 +54,10 @@ def get_static_cities_weather():
         }
     
     weather_conditions = get_weather_conditions()
-    
+    actual_time = get_weather(city)
 
     context = {
-        
+        'actual_day': actual_time[5] if actual_time else None,
         'weather_data': weather_data,
         'search_form': search_form,
         **weather_conditions,
