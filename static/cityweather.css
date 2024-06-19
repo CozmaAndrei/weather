@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.topinfo>h4, .topinfo>h6, .p-2 {
+.topinfo>div>h4 {
     color:chocolate;
 }
 
