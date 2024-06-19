@@ -35,14 +35,26 @@
                         <i class="bi-droplet-half" style="font-size:15px;"></i>
                         <span>Humidity: {{ humidity }}%</span>
                     </div>
+                    <div>
+                        <i class="bi-sunrise" style="font-size:15px;"></i>
+                        <span>Sunrise: {{sunrise_time}}</span>
+                    </div>
+                    <div>
+                        <i class="bi-sunset" style="font-size:15px;"></i>
+                        <span>Sunset: {{sunset_time}}</span>
+                    </div>
                 </div>
                 <div>
-                    {% if weather_data in weather_condition_sunny %}
-                    <img class="sunny" src="{% static 'images/sun.png'%}" >
-                    {% elif weather_data in weather_condition_rainy %}
-                    <img class="rainy" src="{% static 'images/rain.png'%}" >
-                    {% elif weather_data in weather_condition_clouds %}
-                    <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                    {% if actual_time > sunrise_time and actual_time < sunset_time %}
+                        {% if weather_data in weather_condition_sunny %}
+                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                        {% elif weather_data in weather_condition_rainy %}
+                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                        {% elif weather_data in weather_condition_clouds %}
+                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                        {% endif %}
+                    {% elif actual_time > sunset_time and actual_time < sunrise_time %}
+                        Night
                     {% endif %}
                 </div>
             </div>
@@ -59,13 +71,13 @@
                 <div>
                     <h6 class="p-2">{{day1}}</h6>
                     <p>{{min_temp_a_day_after}} / {{max_temp_a_day_after}}°C</p>
-                    {% if weather_data in weather_condition_sunny %}
+                    {% comment %} {% if weather_data in weather_condition_sunny %}
                         <img class="sunny" src="{% static 'images/sun.png'%}" >
                     {% elif weather_data in weather_condition_rainy %}
                         <img class="rainy" src="{% static 'images/rain.png'%}" >
                     {% elif weather_data in weather_condition_clouds %}
                         <img class="clouds" src="{% static 'images/clouds.png'%}" >
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                 </div>
                 {% endif %}
                 <!--day2-->
@@ -73,13 +85,13 @@
                 <div>
                     <h6 class="p-2">{{day2}}</h6>
                     <p>{{min_temp_two_days_after}} / {{max_temp_two_days_after}}°C</p>
-                    {% if weather_data in weather_condition_sunny %}
+                    {% comment %} {% if weather_data in weather_condition_sunny %}
                         <img class="sunny" src="{% static 'images/sun.png'%}" >
                     {% elif weather_data in weather_condition_rainy %}
                         <img class="rainy" src="{% static 'images/rain.png'%}" >
                     {% elif weather_data in weather_condition_clouds %}
                         <img class="clouds" src="{% static 'images/clouds.png'%}" >
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                 </div>
                 {% endif %}
                 <!--day3-->
@@ -87,13 +99,13 @@
                 <div class="">
                     <h6 class="p-2">{{day3}}</h6>
                     <p>{{min_temp_three_days_after}} / {{max_temp_three_days_after}}°C</p>
-                    {% if weather_data in weather_condition_sunny %}
+                    {% comment %} {% if weather_data in weather_condition_sunny %}
                         <img class="sunny" src="{% static 'images/sun.png'%}" >
                     {% elif weather_data in weather_condition_rainy %}
                         <img class="rainy" src="{% static 'images/rain.png'%}" >
                     {% elif weather_data in weather_condition_clouds %}
                         <img class="clouds" src="{% static 'images/clouds.png'%}" >
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                 </div>
                 {% endif %}
             </div>

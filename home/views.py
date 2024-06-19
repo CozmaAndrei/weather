@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from weather import get_weather
+from weather import get_weather, get_sunrise_and_sunset
 from weather_next_days import get_weather_next_days, get_min_temp_max_temp
 from datetime import datetime
 from .forms import SearchForm
@@ -48,8 +48,7 @@ def get_static_cities_weather():
             'temperature': data[1] if data else None,
             'min_temp': data[2] if data else None,
             'max_temp': data[3] if data else None,
-            'sunrise_time': data[4] if data else None,
-            'humidity': data[5] if data else None,
+            'humidity': data[4] if data else None,
         }
     
     weather_conditions = get_weather_conditions()
@@ -70,6 +69,7 @@ def get_cities_weather(request):
         weather_data_next_days = get_weather_next_days(city)
         max_temp_min_temp = get_min_temp_max_temp(city)
         weather_conditions = get_weather_conditions()
+        sunrise_and_sunset_time = get_sunrise_and_sunset(city)
         
         context = {
             'city': city,
@@ -94,7 +94,12 @@ def get_cities_weather(request):
             'max_temp': weather_data[3] if weather_data else None,
             'sunrise_time': weather_data[4] if weather_data else None,
             'humidity': weather_data[5] if weather_data else None,
-            'actual_day': weather_data[6] if weather_data else None,
+            'actual_day': weather_data[5] if weather_data else None,
+            
+            'sunrise_time': sunrise_and_sunset_time[0] if sunrise_and_sunset_time else None,
+            'sunset_time': sunrise_and_sunset_time[1] if sunrise_and_sunset_time else None,
+            'actual_time': sunrise_and_sunset_time[2] if sunrise_and_sunset_time else None,
+            
             'current_time': datetime.now().strftime("%H:%M"),
             'current_data': datetime.now().strftime("%Y-%m-%d"),
             **weather_conditions,
