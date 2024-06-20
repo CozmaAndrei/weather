@@ -30,7 +30,7 @@ main {
     flex: 1;
 }
 
-.abc, footer{
+.top-navbar, footer{
     background-color:steelblue;
 }
 

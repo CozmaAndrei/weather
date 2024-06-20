@@ -1,8 +1,6 @@
 .nextdaysweather {
     display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .topinfo {
@@ -15,4 +13,54 @@
 .topinfo>div>h4 {
     color:chocolate;
 }
+
+.day1, .day2, .day3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.day1>div>h6, .day2>div>h6, .day3>div>h6 {
+    color:chocolate;
+}
+
+.day1-top, .day2-top, .day3-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.day1-bottom, .day2-bottom, .day3-bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: calc(100% / 8);
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    box-sizing: border-box; /* Asigură că padding-ul este inclus în dimensiunea totală */
+}
+
+@media (max-width: 1200px) {
+    .column {
+        min-width: calc(100% / 4);
+    }
+}
+
+@media (max-width: 768px) {
+    .column {
+        min-width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 320px) {
+    .column {
+        min-width: 100%;
+    }
+}
+
 
