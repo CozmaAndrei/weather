@@ -78,7 +78,6 @@ def get_all_descriptions(city):
                 three_days_after_description.append(description)
 
         all_days_description = [a_day_after_description, two_days_after_description, three_days_after_description]
-        print(all_days_description)
         return all_days_description
             
     except Exception:
