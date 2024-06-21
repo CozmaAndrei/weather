@@ -38,15 +38,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.bucharest.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.bucharest.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.bucharest.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.bucharest.actual_time > weather_data.bucharest.sunrise_time and weather_data.bucharest.actual_time < weather_data.bucharest.sunset_time or weather_data.bucharest.sunrise_time == 'N/A' and weather_data.bucharest.sunset_time == 'N/A'%}
                         {% if weather_data.bucharest.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}">
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.bucharest.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}">
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.bucharest.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}">
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.bucharest.actual_time > weather_data.bucharest.sunset_time or weather_data.bucharest.actual_time < weather_data.bucharest.sunrise_time or weather_data.bucharest.sunrise_time == 'N/A' and weather_data.bucharest.sunset_time == 'N/A' %}
+                        {% if weather_data.bucharest.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.bucharest.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -78,15 +104,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.london.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.london.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.london.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.london.actual_time > weather_data.london.sunrise_time and weather_data.london.actual_time < weather_data.london.sunset_time or weather_data.london.sunrise_time == 'N/A' and weather_data.london.sunset_time == 'N/A'%}
                         {% if weather_data.london.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.london.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.london.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.london.actual_time > weather_data.london.sunset_time or weather_data.london.actual_time < weather_data.london.sunrise_time or weather_data.london.sunrise_time == 'N/A' and weather_data.london.sunset_time == 'N/A' %}
+                        {% if weather_data.london.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.london.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -117,15 +169,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.madrid.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.madrid.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.madrid.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.madrid.actual_time > weather_data.madrid.sunrise_time and weather_data.madrid.actual_time < weather_data.madrid.sunset_time or weather_data.madrid.sunrise_time == 'N/A' and weather_data.madrid.sunset_time == 'N/A'%}
                         {% if weather_data.madrid.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.madrid.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.madrid.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.madrid.actual_time > weather_data.madrid.sunset_time or weather_data.madrid.actual_time < weather_data.madrid.sunrise_time or weather_data.madrid.sunrise_time == 'N/A' and weather_data.madrid.sunset_time == 'N/A' %}
+                        {% if weather_data.madrid.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.madrid.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -156,15 +234,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.paris.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.paris.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.paris.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.paris.actual_time > weather_data.paris.sunrise_time and weather_data.paris.actual_time < weather_data.paris.sunset_time or weather_data.paris.sunrise_time == 'N/A' and weather_data.paris.sunset_time == 'N/A'%}
                         {% if weather_data.paris.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.paris.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.paris.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.paris.actual_time > weather_data.paris.sunset_time or weather_data.paris.actual_time < weather_data.paris.sunrise_time or weather_data.paris.sunrise_time == 'N/A' and weather_data.paris.sunset_time == 'N/A' %}
+                        {% if weather_data.paris.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.paris.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -195,15 +299,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.berlin.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.berlin.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.berlin.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.berlin.actual_time > weather_data.berlin.sunrise_time and weather_data.berlin.actual_time < weather_data.berlin.sunset_time or weather_data.berlin.sunrise_time == 'N/A' and weather_data.berlin.sunset_time == 'N/A'%}
                         {% if weather_data.berlin.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.berlin.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.berlin.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.berlin.actual_time > weather_data.berlin.sunset_time or weather_data.berlin.actual_time < weather_data.berlin.sunrise_time or weather_data.berlin.sunrise_time == 'N/A' and weather_data.berlin.sunset_time == 'N/A' %}
+                        {% if weather_data.berlin.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.berlin.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -234,15 +364,41 @@
                             <i class="bi-droplet-half" style="font-size:15px;"></i>
                             <span>Humidity: {{ weather_data.copenhagen.humidity }}%</span>
                         </div>
+                        <div>
+                            <i class="bi-sunrise" style="font-size:15px;"></i>
+                            <span>Sunrise: {{weather_data.copenhagen.sunrise_time}}</span>
+                        </div>
+                        <div>
+                            <i class="bi-sunset" style="font-size:15px;"></i>
+                            <span>Sunset: {{weather_data.copenhagen.sunset_time}}</span>
+                        </div>
                     </div>
                     <div>
+                    {% if weather_data.copenhagen.actual_time > weather_data.copenhagen.sunrise_time and weather_data.copenhagen.actual_time < weather_data.copenhagen.sunset_time or weather_data.copenhagen.sunrise_time == 'N/A' and weather_data.copenhagen.sunset_time == 'N/A'%}
                         {% if weather_data.copenhagen.weather in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data.copenhagen.weather in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data.copenhagen.weather in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
+                    {% elif weather_data.copenhagen.actual_time > weather_data.copenhagen.sunset_time or weather_data.copenhagen.actual_time < weather_data.copenhagen.sunrise_time or weather_data.copenhagen.sunrise_time == 'N/A' and weather_data.copenhagen.sunset_time == 'N/A' %}
+                        {% if weather_data.copenhagen.weather in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data.copenhagen.weather in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>

@@ -49,17 +49,33 @@
                     </div>
                 </div>
                 <div>
+                    
                     {% if actual_time > sunrise_time and actual_time < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if weather_data in weather_condition_sunny %}
-                            <img class="sunny" src="{% static 'images/sun.png'%}" >
+                            <img src="{% static 'images/sun.png'%}" style="height:70px;">
+                        {% elif weather_data in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
                         {% elif weather_data in weather_condition_rainy %}
-                            <img class="rainy" src="{% static 'images/rain.png'%}" >
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
                         {% elif weather_data in weather_condition_clouds %}
-                            <img class="clouds" src="{% static 'images/clouds.png'%}" >
+                            <img src="{% static 'images/clouds.png'%}" style="height:70px;">
+                        {% elif weather_data in weather_condition_few_clouds %}
+                            <img src="{% static 'images/day_sun_clouds.png'%}" style="height:70px;">
                         {% endif %}
-                    {% elif actual_time > sunset_time and actual_time < sunrise_time %}
-                        Night
+                    {% elif actual_time > sunset_time or actual_time < sunrise_time or sunrise_time == 'N/A' and sunset_time == 'N/A' %}
+                        {% if weather_data in weather_condition_night %}
+                            <img src="{% static 'images/moon.png'%}" style="height:70px;">
+                        {% elif weather_data in weather_condtion_light_rain %}
+                            <img src="{% static 'images/light_rain.png' %}" style="height:70px;">
+                        {% elif weather_data in weather_condition_rainy %}
+                            <img src="{% static 'images/rain.png'%}" style="height:70px;">
+                        {% elif weather_data in weather_condition_clouds %}
+                            <img src="{% static 'images/night_clouds.png'%}" style="height:70px;">
+                        {% elif weather_data in weather_condition_few_clouds %}
+                            <img src="{% static 'images/night_few_clouds.png'%}" style="height:70px;">
+                        {% endif %}
                     {% endif %}
+
                 </div>
             </div>
             <!--card end-->
@@ -69,173 +85,9 @@
             <!--line end-->
 
             <!--weather on next days-->
-            <div class="nextdaysweather">
-
-                <!--day1-->
-                <div class="day1">
-                    {% if weather_data_next_days%}
-                    <div class="day1-top">
-                        <h6 class="p-2">{{day1_date}}</h6>
-                    </div>
-                    <div class="day1-bottom">
-                        <div class="column">
-                            <p>00:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_00}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>03:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_03}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>06:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_06}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>09:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_09}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>12:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_12}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>15:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_15}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>18:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_18}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>21:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day1_time_21}}°C</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-
-                <!--line-->
-                <div class="bg-dark w-100 mb-3" style="height: 1px;"></div>
-                <!--line end-->
-
-                <!--day2-->
-                <div class="day2">
-                    {% if weather_data_next_days%}
-                    <div class="day2-top">
-                        <h6 class="p-2">{{day2_date}}</h6>
-                    </div>
-                    <div class="day2-bottom">
-                        <div class="column">
-                            <p>00:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_00}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>03:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_03}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>06:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_06}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>09:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_09}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>12:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_12}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>15:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_15}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>18:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_18}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>21:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day2_time_21}}°C</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-
-                <!--line-->
-                <div class="bg-dark w-100 mb-3" style="height: 1px;"></div>
-                <!--line end-->
-
-                <!--day3-->
-                <div class="day3">
-                    {% if weather_data_next_days%}
-                    <div class="day3-top">
-                        <h6 class="p-2">{{day3_date}}</h6>
-                    </div>
-                    <div class="day3-bottom">
-                        <div class="column">
-                            <p>00:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_00}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>03:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_03}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>06:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_06}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>09:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_09}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>12:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_12}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>15:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_15}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>18:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_18}}°C</p>
-                        </div>
-                        <div class="column">
-                            <p>21:00</p>
-                            <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                            <p>{{day3_time_21}}°C</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-
-                <!--line-->
-                <div class="bg-dark w-100 mb-3" style="height: 1px;"></div>
-                <!--line end-->
-            </div>
+            {% block nextdaysweather %}
+            {% endblock %}
+            
             <!--weather on 7 days end-->
         </div>
     </div>
