@@ -1,15 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from weather import get_current_dates, get_sunrise_sunset_time
 from weather_next_days import get_weather_next_days, get_all_temps, get_all_descriptions, get_all_times
-from datetime import datetime
 from .forms import SearchForm
 
 
 '''This function return the weather conditions'''
 def get_weather_conditions():
     weather_condition_sunny = {
-        # img sun.png
-        'clear sky': 'sunny',
+        #img sun.png
+        'clear sky': 'sunny', 
     }
     weather_condition_night = {
         #img moon.png
@@ -26,11 +25,12 @@ def get_weather_conditions():
         'broken clouds': 'clouds',
     }
     weather_condtion_light_rain = {
-        #img light_rain.png(day) //
+        #img light_rain.png(day) // light_rain.png(night)
         'light rain': 'rainy',
         'moderate rain': 'rainy',
     }
     weather_condition_rainy = {
+        #img rain.png(day) // rain.png(night)
         'heavy intensity rain': 'rainy',
     }
 
@@ -108,35 +108,16 @@ def all_descriptions(description):
 
 '''Return all the temps for the next days from 3h in 3h'''
 def all_temps(temp):
-    all_days_temps_context = {
-        #day1
-        'day1_time_00': temp[0][0] if temp else None,
-        'day1_time_03': temp[0][1] if temp else None,
-        'day1_time_06': temp[0][2] if temp else None,
-        'day1_time_09': temp[0][3] if temp else None,
-        'day1_time_12': temp[0][4] if temp else None,
-        'day1_time_15': temp[0][5] if temp else None,
-        'day1_time_18': temp[0][6] if temp else None,
-        'day1_time_21': temp[0][7] if temp else None,
-        #day2
-        'day2_time_00': temp[1][0] if temp else None,
-        'day2_time_03': temp[1][1] if temp else None,
-        'day2_time_06': temp[1][2] if temp else None,
-        'day2_time_09': temp[1][3] if temp else None,
-        'day2_time_12': temp[1][4] if temp else None,
-        'day2_time_15': temp[1][5] if temp else None,
-        'day2_time_18': temp[1][6] if temp else None,
-        'day2_time_21': temp[1][7] if temp else None,
-        #day3
-        'day3_time_00': temp[2][0] if temp else None,
-        'day3_time_03': temp[2][1] if temp else None,
-        'day3_time_06': temp[2][2] if temp else None,
-        'day3_time_09': temp[2][3] if temp else None,
-        'day3_time_12': temp[2][4] if temp else None,
-        'day3_time_15': temp[2][5] if temp else None,
-        'day3_time_18': temp[2][6] if temp else None,
-        'day3_time_21': temp[2][7] if temp else None,
-    }
+    all_days_temps_context = {}
+    if temp:
+        for i in range(1,4): #day1, day2, day3
+            for y in range(8): #time from 00:00 to 21:00
+                all_days_temps_context[f'day{i}_time{y}_temperature'] = temp[i-1][y]
+    else:
+        for i in range(1,4):
+            for y in range(8):
+                all_days_temps_context[f'day{i}_time{y}_temperature'] = None
+
     return all_days_temps_context
     
 '''This function is used for POST-search_form'''
