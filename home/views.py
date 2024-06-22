@@ -99,36 +99,17 @@ def all_times(time):
 
 '''Return all the descriptions for the next days from 3h in 3h'''
 def all_descriptions(description):
-    all_days_description_context = {
-        #day1
-        'day1_time_00_desc': description[0][0] if description else None, 
-        'day1_time_03_desc': description[0][1] if description else None, 
-        'day1_time_06_desc': description[0][2] if description else None, 
-        'day1_time_09_desc': description[0][3] if description else None, 
-        'day1_time_12_desc': description[0][4] if description else None, 
-        'day1_time_15_desc': description[0][5] if description else None,
-        'day1_time_18_desc': description[0][6] if description else None,
-        'day1_time_21_desc': description[0][7] if description else None,
-        #day2
-        'day2_time_00_desc': description[1][0] if description else None, 
-        'day2_time_03_desc': description[1][1] if description else None, 
-        'day2_time_06_desc': description[1][2] if description else None, 
-        'day2_time_09_desc': description[1][3] if description else None, 
-        'day2_time_12_desc': description[1][4] if description else None, 
-        'day2_time_15_desc': description[1][5] if description else None,
-        'day2_time_18_desc': description[1][6] if description else None,
-        'day2_time_21_desc': description[1][7] if description else None,
-        #day3
-        'day3_time_00_desc': description[2][0] if description else None, 
-        'day3_time_03_desc': description[2][1] if description else None, 
-        'day3_time_06_desc': description[2][2] if description else None, 
-        'day3_time_09_desc': description[2][3] if description else None, 
-        'day3_time_12_desc': description[2][4] if description else None, 
-        'day3_time_15_desc': description[2][5] if description else None,
-        'day3_time_18_desc': description[2][6] if description else None,
-        'day3_time_21_desc': description[2][7] if description else None,
-    }
+    all_days_description_context = {}
+    if description:
+        for i in range(1,4): #day1, day2, day3
+            for y in range(8): #time from 00:00 to 21:00
+                all_days_description_context[f'day{i}_time{y}'] = description[i-1][y]
+    else:
+        for i in range(1,4):
+            for y in range(8):
+                all_days_description_context[f'day{i}_time{y}'] = None
     return all_days_description_context
+
 '''Return all the temps for the next days from 3h in 3h'''
 def all_temps(temp):
     all_days_temps_context = {
@@ -219,3 +200,4 @@ def get_weather_now(request):
         
     context = get_static_cities_weather()
     return render(request, 'weather_in_capitals.html', context)
+

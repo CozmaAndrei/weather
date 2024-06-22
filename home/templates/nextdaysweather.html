@@ -19,27 +19,27 @@
                 <div class="column">
                     <p>{{time00}}</p>
                     {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_00_desc in weather_condition_sunny %}
+                        {% if day1_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day1_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_rainy %}
+                        {% elif day1_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_clouds %}
+                        {% elif day1_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day1_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time00 < sunrise_time %}
-                        {% if day1_time_00_desc in weather_condition_night %}
+                        {% if day1_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day1_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_rainy %}
+                        {% elif day1_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_clouds %}
+                        {% elif day1_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day1_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -48,27 +48,27 @@
                 <div class="column">
                     <p>{{time03}}</p>
                     {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_03_desc in weather_condition_sunny %}
+                        {% if day1_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day1_time1 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_rainy %}
+                        {% elif day1_time1 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_clouds %}
+                        {% elif day1_time1 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day1_time1 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time03 < sunrise_time %}
-                        {% if day1_time_03_desc in weather_condition_night %}
+                        {% if day1_time1 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day1_time1 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_rainy %}
+                        {% elif day1_time1 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_clouds %}
+                        {% elif day1_time1 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day1_time1 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -77,27 +77,27 @@
                 <div class="column">
                     <p>{{time06}}</p>
                     {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_06_desc in weather_condition_sunny %}
+                        {% if day1_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day1_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_rainy %}
+                        {% elif day1_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_clouds %}
+                        {% elif day1_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day1_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time06 < sunrise_time %}
-                        {% if day1_time_06_desc in weather_condition_night %}
+                        {% if day1_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day1_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_rainy %}
+                        {% elif day1_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_clouds %}
+                        {% elif day1_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day1_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -106,27 +106,27 @@
                 <div class="column">
                     <p>{{time09}}</p>
                     {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_09_desc in weather_condition_sunny %}
+                        {% if day1_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day1_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_rainy %}
+                        {% elif day1_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_clouds %}
+                        {% elif day1_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day1_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time09 < sunrise_time %}
-                        {% if day1_time_09_desc in weather_condition_night %}
+                        {% if day1_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day1_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_rainy %}
+                        {% elif day1_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_clouds %}
+                        {% elif day1_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day1_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -135,27 +135,27 @@
                 <div class="column">
                     <p>{{time12}}</p>
                     {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_12_desc in weather_condition_sunny %}
+                        {% if day1_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day1_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_rainy %}
+                        {% elif day1_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_clouds %}
+                        {% elif day1_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day1_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time12 < sunrise_time %}
-                        {% if day1_time_12_desc in weather_condition_night %}
+                        {% if day1_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day1_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_rainy %}
+                        {% elif day1_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_clouds %}
+                        {% elif day1_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day1_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -164,27 +164,27 @@
                 <div class="column">
                     <p>{{time15}}</p>
                     {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_15_desc in weather_condition_sunny %}
+                        {% if day1_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day1_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_rainy %}
+                        {% elif day1_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_clouds %}
+                        {% elif day1_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day1_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time15 < sunrise_time %}
-                        {% if day1_time_15_desc in weather_condition_night %}
+                        {% if day1_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day1_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_rainy %}
+                        {% elif day1_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_clouds %}
+                        {% elif day1_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day1_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -193,27 +193,27 @@
                 <div class="column">
                     <p>{{time18}}</p>
                     {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_18_desc in weather_condition_sunny %}
+                        {% if day1_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day1_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_rainy %}
+                        {% elif day1_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_clouds %}
+                        {% elif day1_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day1_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time18 < sunrise_time or time18 > sunset_time %}
-                        {% if day1_time_18_desc in weather_condition_night %}
+                        {% if day1_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day1_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_rainy %}
+                        {% elif day1_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_clouds %}
+                        {% elif day1_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day1_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -222,27 +222,27 @@
                 <div class="column">
                     <p>{{time21}}</p>
                     {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day1_time_21_desc in weather_condition_sunny %}
+                        {% if day1_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day1_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_rainy %}
+                        {% elif day1_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_clouds %}
+                        {% elif day1_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day1_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time21 < sunrise_time or time21 > sunset_time %}
-                        {% if day1_time_21_desc in weather_condition_night %}
+                        {% if day1_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day1_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_rainy %}
+                        {% elif day1_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_clouds %}
+                        {% elif day1_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day1_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day1_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -266,27 +266,27 @@
                 <div class="column">
                     <p>{{time00}}</p>
                     {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_00_desc in weather_condition_sunny %}
+                        {% if day2_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day2_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_rainy %}
+                        {% elif day2_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_clouds %}
+                        {% elif day2_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day2_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time00 < sunrise_time %}
-                        {% if day2_time_00_desc in weather_condition_night %}
+                        {% if day2_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day2_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_rainy %}
+                        {% elif day2_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_clouds %}
+                        {% elif day2_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day2_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -295,27 +295,27 @@
                 <div class="column">
                     <p>{{time03}}</p>
                     {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_03_desc in weather_condition_sunny %}
+                        {% if day2_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day2_time1  in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_rainy %}
+                        {% elif day2_time1  in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_clouds %}
+                        {% elif day2_time1  in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day2_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time03 < sunrise_time %}
-                        {% if day2_time_03_desc in weather_condition_night %}
+                        {% if day2_time1  in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day2_time1  in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_rainy %}
+                        {% elif day2_time1  in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_clouds %}
+                        {% elif day2_time1  in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day2_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -324,27 +324,27 @@
                 <div class="column">
                     <p>{{time06}}</p>
                     {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_06_desc in weather_condition_sunny %}
+                        {% if day2_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day2_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_rainy %}
+                        {% elif day2_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_clouds %}
+                        {% elif day2_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day2_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time06 < sunrise_time %}
-                        {% if day2_time_06_desc in weather_condition_night %}
+                        {% if day2_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day2_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_rainy %}
+                        {% elif day2_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_clouds %}
+                        {% elif day2_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day2_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -353,27 +353,27 @@
                 <div class="column">
                     <p>{{time09}}</p>
                     {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_09_desc in weather_condition_sunny %}
+                        {% if day2_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day2_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_rainy %}
+                        {% elif day2_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_clouds %}
+                        {% elif day2_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day2_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time09 < sunrise_time %}
-                        {% if day2_time_09_desc in weather_condition_night %}
+                        {% if day2_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day2_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_rainy %}
+                        {% elif day2_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_clouds %}
+                        {% elif day2_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day2_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -382,27 +382,27 @@
                 <div class="column">
                     <p>{{time12}}</p>
                     {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_12_desc in weather_condition_sunny %}
+                        {% if day2_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day2_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_rainy %}
+                        {% elif day2_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_clouds %}
+                        {% elif day2_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day2_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time12 < sunrise_time %}
-                        {% if day2_time_12_desc in weather_condition_night %}
+                        {% if day2_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day2_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_rainy %}
+                        {% elif day2_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_clouds %}
+                        {% elif day2_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day2_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -411,27 +411,27 @@
                 <div class="column">
                     <p>{{time15}}</p>
                     {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_15_desc in weather_condition_sunny %}
+                        {% if day2_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day2_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_rainy %}
+                        {% elif day2_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_clouds %}
+                        {% elif day2_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day2_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time15 < sunrise_time %}
-                        {% if day2_time_15_desc in weather_condition_night %}
+                        {% if day2_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day2_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_rainy %}
+                        {% elif day2_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_clouds %}
+                        {% elif day2_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day2_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -440,27 +440,27 @@
                 <div class="column">
                     <p>{{time18}}</p>
                     {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_18_desc in weather_condition_sunny %}
+                        {% if day2_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day2_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_rainy %}
+                        {% elif day2_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_clouds %}
+                        {% elif day2_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day2_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time18 < sunrise_time or time18 > sunset_time %}
-                        {% if day2_time_18_desc in weather_condition_night %}
+                        {% if day2_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day2_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_rainy %}
+                        {% elif day2_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_clouds %}
+                        {% elif day2_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day2_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -469,27 +469,27 @@
                 <div class="column">
                     <p>{{time21}}</p>
                     {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day2_time_21_desc in weather_condition_sunny %}
+                        {% if day2_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day2_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_rainy %}
+                        {% elif day2_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_clouds %}
+                        {% elif day2_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day2_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time21 < sunrise_time or time21 > sunset_time %}
-                        {% if day2_time_21_desc in weather_condition_night %}
+                        {% if day2_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day2_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_rainy %}
+                        {% elif day2_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_clouds %}
+                        {% elif day2_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day2_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day2_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -513,27 +513,27 @@
                 <div class="column">
                     <p>{{time00}}</p>
                     {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_00_desc in weather_condition_sunny %}
+                        {% if day3_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day3_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_rainy %}
+                        {% elif day3_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_clouds %}
+                        {% elif day3_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day3_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time00 < sunrise_time %}
-                        {% if day3_time_00_desc in weather_condition_night %}
+                        {% if day3_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condtion_light_rain %}
+                        {% elif day3_time0 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_rainy %}
+                        {% elif day3_time0 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_clouds %}
+                        {% elif day3_time0 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_00_desc in weather_condition_few_clouds %}
+                        {% elif day3_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -542,27 +542,27 @@
                 <div class="column">
                     <p>{{time03}}</p>
                     {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_03_desc in weather_condition_sunny %}
+                        {% if day3_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day3_time1  in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_rainy %}
+                        {% elif day3_time1  in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_clouds %}
+                        {% elif day3_time1  in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day3_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time03 < sunrise_time %}
-                        {% if day3_time_03_desc in weather_condition_night %}
+                        {% if day3_time1  in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condtion_light_rain %}
+                        {% elif day3_time1  in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_rainy %}
+                        {% elif day3_time1  in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_clouds %}
+                        {% elif day3_time1  in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_03_desc in weather_condition_few_clouds %}
+                        {% elif day3_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -571,27 +571,27 @@
                 <div class="column">
                     <p>{{time06}}</p>
                     {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_06_desc in weather_condition_sunny %}
+                        {% if day3_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day3_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_rainy %}
+                        {% elif day3_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_clouds %}
+                        {% elif day3_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day3_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time06 < sunrise_time %}
-                        {% if day3_time_06_desc in weather_condition_night %}
+                        {% if day3_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condtion_light_rain %}
+                        {% elif day3_time2 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_rainy %}
+                        {% elif day3_time2 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_clouds %}
+                        {% elif day3_time2 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_06_desc in weather_condition_few_clouds %}
+                        {% elif day3_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -600,27 +600,27 @@
                 <div class="column">
                     <p>{{time09}}</p>
                     {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_09_desc in weather_condition_sunny %}
+                        {% if day3_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day3_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_rainy %}
+                        {% elif day3_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_clouds %}
+                        {% elif day3_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day3_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time09 < sunrise_time %}
-                        {% if day3_time_09_desc in weather_condition_night %}
+                        {% if day3_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condtion_light_rain %}
+                        {% elif day3_time3 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_rainy %}
+                        {% elif day3_time3 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_clouds %}
+                        {% elif day3_time3 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_09_desc in weather_condition_few_clouds %}
+                        {% elif day3_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -629,27 +629,27 @@
                 <div class="column">
                     <p>{{time12}}</p>
                     {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_12_desc in weather_condition_sunny %}
+                        {% if day3_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day3_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_rainy %}
+                        {% elif day3_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_clouds %}
+                        {% elif day3_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day3_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time12 < sunrise_time %}
-                        {% if day3_time_12_desc in weather_condition_night %}
+                        {% if day3_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condtion_light_rain %}
+                        {% elif day3_time4 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_rainy %}
+                        {% elif day3_time4 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_clouds %}
+                        {% elif day3_time4 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_12_desc in weather_condition_few_clouds %}
+                        {% elif day3_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -658,27 +658,27 @@
                 <div class="column">
                     <p>{{time15}}</p>
                     {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_15_desc in weather_condition_sunny %}
+                        {% if day3_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day3_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_rainy %}
+                        {% elif day3_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_clouds %}
+                        {% elif day3_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day3_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time15 < sunrise_time %}
-                        {% if day3_time_15_desc in weather_condition_night %}
+                        {% if day3_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condtion_light_rain %}
+                        {% elif day3_time5 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_rainy %}
+                        {% elif day3_time5 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_clouds %}
+                        {% elif day3_time5 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_15_desc in weather_condition_few_clouds %}
+                        {% elif day3_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -687,27 +687,27 @@
                 <div class="column">
                     <p>{{time18}}</p>
                     {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_18_desc in weather_condition_sunny %}
+                        {% if day3_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day3_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_rainy %}
+                        {% elif day3_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_clouds %}
+                        {% elif day3_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day3_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time18 < sunrise_time or time18 > sunset_time %}
-                        {% if day3_time_18_desc in weather_condition_night %}
+                        {% if day3_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condtion_light_rain %}
+                        {% elif day3_time6 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_rainy %}
+                        {% elif day3_time6 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_clouds %}
+                        {% elif day3_time6 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_18_desc in weather_condition_few_clouds %}
+                        {% elif day3_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
@@ -716,27 +716,27 @@
                 <div class="column">
                     <p>{{time21}}</p>
                     {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
-                        {% if day3_time_21_desc in weather_condition_sunny %}
+                        {% if day3_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day3_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_rainy %}
+                        {% elif day3_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_clouds %}
+                        {% elif day3_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day3_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% elif time21 < sunrise_time or time21 > sunset_time %}
-                        {% if day3_time_21_desc in weather_condition_night %}
+                        {% if day3_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condtion_light_rain %}
+                        {% elif day3_time7 in weather_condtion_light_rain %}
                             <img src="{% static 'images/light_rain.png' %}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_rainy %}
+                        {% elif day3_time7 in weather_condition_rainy %}
                             <img src="{% static 'images/rain.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_clouds %}
+                        {% elif day3_time7 in weather_condition_clouds %}
                             <img src="{% static 'images/night_clouds.png'%}" style="height:40px;">
-                        {% elif day3_time_21_desc in weather_condition_few_clouds %}
+                        {% elif day3_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/night_few_clouds.png'%}" style="height:40px;">
                         {% endif %}
                     {% endif %}
