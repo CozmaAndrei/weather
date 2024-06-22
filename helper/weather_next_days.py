@@ -4,7 +4,7 @@ from decouple import config
 
 '''Return description and name of the next 3 days'''
 def get_weather_next_days(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}'
     try:
         status = requests.get(url).json()
@@ -23,7 +23,7 @@ def get_weather_next_days(city):
 
 '''Return one list with all times/clocks for the next 3 days'''
 def get_all_times(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}'
     
     try:
@@ -48,7 +48,7 @@ def get_all_times(city):
     
 '''Return one list with all description for the next 3 days'''
 def get_all_descriptions(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}'
     
     try:
@@ -85,7 +85,7 @@ def get_all_descriptions(city):
     
 '''Return one lists with all temperatures for the next 3 days'''
 def get_all_temps(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}'
     
     try:
@@ -120,6 +120,3 @@ def get_all_temps(city):
     except Exception:
         return None
     
-# if __name__ == "__main__":
-#     city = input()
-#     get_all_temps(city)

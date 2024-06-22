@@ -5,7 +5,7 @@ from timezonefinder import TimezoneFinder
 
 '''This function return current (day, current temp, min_temp, max_temp, humidity and weather description)'''
 def get_current_dates(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
     try:
         status = requests.get(url).json()
@@ -29,7 +29,7 @@ def get_current_dates(city):
 
 '''This function return the sunrise,sunset and current time'''
 def get_sunrise_sunset_time(city):
-    API_KEY = config('API_KEY_get_weather')
+    API_KEY = config('API_KEY_GET_WEATHER')
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
     try:
         status = requests.get(url).json()
@@ -56,7 +56,3 @@ def get_sunrise_sunset_time(city):
         return sunrise_time, sunset_time, actual_time
     except Exception:
         return None
-    
-# if __name__ == "__main__":
-#     city = input()
-#     get_sunrise_and_sunset(city)

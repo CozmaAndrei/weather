@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from weather import get_current_dates, get_sunrise_sunset_time
-from weather_next_days import get_weather_next_days, get_all_temps, get_all_descriptions, get_all_times
+from helper.weather import get_current_dates, get_sunrise_sunset_time
+from helper.weather_next_days import get_weather_next_days, get_all_temps, get_all_descriptions, get_all_times
 from .forms import SearchForm
 
 
