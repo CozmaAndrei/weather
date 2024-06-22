@@ -84,17 +84,13 @@ def get_static_cities_weather():
 
 '''Return all the times for the next days from 3h in 3h'''
 def all_times(time):
-    all_days_time_context = {
-        #day1
-        'time00': time[0] if time else None,
-        'time03': time[1] if time else None,
-        'time06': time[2] if time else None,
-        'time09': time[3] if time else None,
-        'time12': time[4] if time else None,
-        'time15': time[5] if time else None,
-        'time18': time[6] if time else None,
-        'time21': time[7] if time else None,
-    }
+    all_days_time_context = {}
+    if time:
+        for i in range(8): #time fro 00:00-21:00
+            all_days_time_context[f'time{i}'] = time[i]
+    else:
+        for i in range(8):
+            all_days_time_context[f'time{i}'] = None
     return all_days_time_context
 
 '''Return all the descriptions for the next days from 3h in 3h'''

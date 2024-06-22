@@ -17,8 +17,8 @@
             </div>
             <div class="day1-bottom">
                 <div class="column">
-                    <p>{{time00}}</p>
-                    {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time0}}</p>
+                    {% if time0 > sunrise_time and time0 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time0 in weather_condtion_light_rain %}
@@ -30,7 +30,7 @@
                         {% elif day1_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time00 < sunrise_time %}
+                    {% elif time0 < sunrise_time %}
                         {% if day1_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time0 in weather_condtion_light_rain %}
@@ -46,8 +46,8 @@
                     <p>{{day1_time_00}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time03}}</p>
-                    {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time1}}</p>
+                    {% if time1 > sunrise_time and time1 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time1 in weather_condtion_light_rain %}
@@ -59,7 +59,7 @@
                         {% elif day1_time1 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time03 < sunrise_time %}
+                    {% elif time1 < sunrise_time %}
                         {% if day1_time1 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time1 in weather_condtion_light_rain %}
@@ -75,8 +75,8 @@
                     <p>{{day1_time_03}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time06}}</p>
-                    {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time2}}</p>
+                    {% if time2 > sunrise_time and time2 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time2 in weather_condtion_light_rain %}
@@ -88,7 +88,7 @@
                         {% elif day1_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time06 < sunrise_time %}
+                    {% elif time2 < sunrise_time %}
                         {% if day1_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time2 in weather_condtion_light_rain %}
@@ -104,8 +104,8 @@
                     <p>{{day1_time_06}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time09}}</p>
-                    {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time3}}</p>
+                    {% if time3 > sunrise_time and time3 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time3 in weather_condtion_light_rain %}
@@ -117,7 +117,7 @@
                         {% elif day1_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time09 < sunrise_time %}
+                    {% elif time3 < sunrise_time %}
                         {% if day1_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time3 in weather_condtion_light_rain %}
@@ -133,8 +133,8 @@
                     <p>{{day1_time_09}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time12}}</p>
-                    {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time4}}</p>
+                    {% if time4 > sunrise_time and time4 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time4 in weather_condtion_light_rain %}
@@ -146,7 +146,7 @@
                         {% elif day1_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time12 < sunrise_time %}
+                    {% elif time4 < sunrise_time %}
                         {% if day1_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time4 in weather_condtion_light_rain %}
@@ -162,8 +162,8 @@
                     <p>{{day1_time_12}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time15}}</p>
-                    {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time5}}</p>
+                    {% if time5 > sunrise_time and time5 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time5 in weather_condtion_light_rain %}
@@ -175,7 +175,7 @@
                         {% elif day1_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time15 < sunrise_time %}
+                    {% elif time5 < sunrise_time %}
                         {% if day1_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time5 in weather_condtion_light_rain %}
@@ -191,8 +191,8 @@
                     <p>{{day1_time_15}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time18}}</p>
-                    {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time6}}</p>
+                    {% if time6 > sunrise_time and time6 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time6 in weather_condtion_light_rain %}
@@ -204,7 +204,7 @@
                         {% elif day1_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time18 < sunrise_time or time18 > sunset_time %}
+                    {% elif time6 < sunrise_time or time6 > sunset_time %}
                         {% if day1_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time6 in weather_condtion_light_rain %}
@@ -220,8 +220,8 @@
                     <p>{{day1_time_18}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time21}}</p>
-                    {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time7}}</p>
+                    {% if time7 > sunrise_time or time7 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day1_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day1_time7 in weather_condtion_light_rain %}
@@ -233,7 +233,7 @@
                         {% elif day1_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time21 < sunrise_time or time21 > sunset_time %}
+                    {% elif time7 < sunrise_time or time7 > sunset_time %}
                         {% if day1_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day1_time7 in weather_condtion_light_rain %}
@@ -264,8 +264,8 @@
             </div>
             <div class="day2-bottom">
                 <div class="column">
-                    <p>{{time00}}</p>
-                    {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time0}}</p>
+                    {% if time0 > sunrise_time and time0 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time0 in weather_condtion_light_rain %}
@@ -277,7 +277,7 @@
                         {% elif day2_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time00 < sunrise_time %}
+                    {% elif time0 < sunrise_time %}
                         {% if day2_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time0 in weather_condtion_light_rain %}
@@ -293,8 +293,8 @@
                     <p>{{day2_time_00}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time03}}</p>
-                    {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time1}}</p>
+                    {% if time1 > sunrise_time and time1 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time1  in weather_condtion_light_rain %}
@@ -306,7 +306,7 @@
                         {% elif day2_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time03 < sunrise_time %}
+                    {% elif time1 < sunrise_time %}
                         {% if day2_time1  in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time1  in weather_condtion_light_rain %}
@@ -322,8 +322,8 @@
                     <p>{{day2_time_03}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time06}}</p>
-                    {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time2}}</p>
+                    {% if time2 > sunrise_time and time2 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time2 in weather_condtion_light_rain %}
@@ -335,7 +335,7 @@
                         {% elif day2_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time06 < sunrise_time %}
+                    {% elif time2 < sunrise_time %}
                         {% if day2_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time2 in weather_condtion_light_rain %}
@@ -351,8 +351,8 @@
                     <p>{{day2_time_06}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time09}}</p>
-                    {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time3}}</p>
+                    {% if time3 > sunrise_time and time3 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time3 in weather_condtion_light_rain %}
@@ -364,7 +364,7 @@
                         {% elif day2_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time09 < sunrise_time %}
+                    {% elif time3 < sunrise_time %}
                         {% if day2_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time3 in weather_condtion_light_rain %}
@@ -380,8 +380,8 @@
                     <p>{{day2_time_09}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time12}}</p>
-                    {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time4}}</p>
+                    {% if time4 > sunrise_time and time4 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time4 in weather_condtion_light_rain %}
@@ -393,7 +393,7 @@
                         {% elif day2_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time12 < sunrise_time %}
+                    {% elif time4 < sunrise_time %}
                         {% if day2_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time4 in weather_condtion_light_rain %}
@@ -409,8 +409,8 @@
                     <p>{{day2_time_12}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time15}}</p>
-                    {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time5}}</p>
+                    {% if time5 > sunrise_time and time5 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time5 in weather_condtion_light_rain %}
@@ -422,7 +422,7 @@
                         {% elif day2_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time15 < sunrise_time %}
+                    {% elif time5 < sunrise_time %}
                         {% if day2_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time5 in weather_condtion_light_rain %}
@@ -438,8 +438,8 @@
                     <p>{{day2_time_15}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time18}}</p>
-                    {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time6}}</p>
+                    {% if time6 > sunrise_time and time6 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time6 in weather_condtion_light_rain %}
@@ -451,7 +451,7 @@
                         {% elif day2_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time18 < sunrise_time or time18 > sunset_time %}
+                    {% elif time6 < sunrise_time or time6 > sunset_time %}
                         {% if day2_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time6 in weather_condtion_light_rain %}
@@ -467,8 +467,8 @@
                     <p>{{day2_time_18}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time21}}</p>
-                    {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time7}}</p>
+                    {% if time7 > sunrise_time or time7 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day2_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day2_time7 in weather_condtion_light_rain %}
@@ -480,7 +480,7 @@
                         {% elif day2_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time21 < sunrise_time or time21 > sunset_time %}
+                    {% elif time7 < sunrise_time or time7 > sunset_time %}
                         {% if day2_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day2_time7 in weather_condtion_light_rain %}
@@ -511,8 +511,8 @@
             </div>
             <div class="day3-bottom">
                 <div class="column">
-                    <p>{{time00}}</p>
-                    {% if time00 > sunrise_time and time00 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time0}}</p>
+                    {% if time0 > sunrise_time and time0 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time0 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time0 in weather_condtion_light_rain %}
@@ -524,7 +524,7 @@
                         {% elif day3_time0 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time00 < sunrise_time %}
+                    {% elif time0 < sunrise_time %}
                         {% if day3_time0 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time0 in weather_condtion_light_rain %}
@@ -540,8 +540,8 @@
                     <p>{{day3_time_00}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time03}}</p>
-                    {% if time03 > sunrise_time and time03 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time1}}</p>
+                    {% if time1 > sunrise_time and time1 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time1 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time1  in weather_condtion_light_rain %}
@@ -553,7 +553,7 @@
                         {% elif day3_time1  in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time03 < sunrise_time %}
+                    {% elif time1 < sunrise_time %}
                         {% if day3_time1  in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time1  in weather_condtion_light_rain %}
@@ -569,8 +569,8 @@
                     <p>{{day3_time_03}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time06}}</p>
-                    {% if time06 > sunrise_time and time06 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time2}}</p>
+                    {% if time2 > sunrise_time and time2 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time2 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time2 in weather_condtion_light_rain %}
@@ -582,7 +582,7 @@
                         {% elif day3_time2 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time06 < sunrise_time %}
+                    {% elif time2 < sunrise_time %}
                         {% if day3_time2 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time2 in weather_condtion_light_rain %}
@@ -598,8 +598,8 @@
                     <p>{{day3_time_06}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time09}}</p>
-                    {% if time09 > sunrise_time and time09 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time3}}</p>
+                    {% if time3 > sunrise_time and time3 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time3 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time3 in weather_condtion_light_rain %}
@@ -611,7 +611,7 @@
                         {% elif day3_time3 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time09 < sunrise_time %}
+                    {% elif time3 < sunrise_time %}
                         {% if day3_time3 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time3 in weather_condtion_light_rain %}
@@ -627,8 +627,8 @@
                     <p>{{day3_time_09}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time12}}</p>
-                    {% if time12 > sunrise_time and time12 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time4}}</p>
+                    {% if time4 > sunrise_time and time4 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time4 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time4 in weather_condtion_light_rain %}
@@ -640,7 +640,7 @@
                         {% elif day3_time4 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time12 < sunrise_time %}
+                    {% elif time4 < sunrise_time %}
                         {% if day3_time4 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time4 in weather_condtion_light_rain %}
@@ -656,8 +656,8 @@
                     <p>{{day3_time_12}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time15}}</p>
-                    {% if time15 > sunrise_time and time15 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time5}}</p>
+                    {% if time5 > sunrise_time and time5 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time5 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time5 in weather_condtion_light_rain %}
@@ -669,7 +669,7 @@
                         {% elif day3_time5 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time15 < sunrise_time %}
+                    {% elif time5 < sunrise_time %}
                         {% if day3_time5 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time5 in weather_condtion_light_rain %}
@@ -685,8 +685,8 @@
                     <p>{{day3_time_15}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time18}}</p>
-                    {% if time18 > sunrise_time and time18 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time6}}</p>
+                    {% if time6 > sunrise_time and time6 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time6 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time6 in weather_condtion_light_rain %}
@@ -698,7 +698,7 @@
                         {% elif day3_time6 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time18 < sunrise_time or time18 > sunset_time %}
+                    {% elif time6 < sunrise_time or time6 > sunset_time %}
                         {% if day3_time6 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time6 in weather_condtion_light_rain %}
@@ -714,8 +714,8 @@
                     <p>{{day3_time_18}}°C</p>
                 </div>
                 <div class="column">
-                    <p>{{time21}}</p>
-                    {% if time21 > sunrise_time or time21 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
+                    <p>{{time7}}</p>
+                    {% if time7 > sunrise_time or time7 < sunset_time or sunrise_time == 'N/A' and sunset_time == 'N/A'%}
                         {% if day3_time7 in weather_condition_sunny %}
                             <img src="{% static 'images/sun.png'%}" style="height:40px;">
                         {% elif day3_time7 in weather_condtion_light_rain %}
@@ -727,7 +727,7 @@
                         {% elif day3_time7 in weather_condition_few_clouds %}
                             <img src="{% static 'images/day_sun_clouds.png'%}" style="height:40px;">
                         {% endif %}
-                    {% elif time21 < sunrise_time or time21 > sunset_time %}
+                    {% elif time7 < sunrise_time or time7 > sunset_time %}
                         {% if day3_time7 in weather_condition_night %}
                             <img src="{% static 'images/moon.png'%}" style="height:40px;">
                         {% elif day3_time7 in weather_condtion_light_rain %}
