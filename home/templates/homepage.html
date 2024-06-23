@@ -33,7 +33,7 @@
             <!--navbar end-->
 
             <!--search form-->
-            <form method="POST" class="d-flex justify-content-center p-1" >
+            <form method="POST" class="d-flex justify-content-center p-1" action="{% url 'get_weather_now' %}">
                 {% csrf_token %}
                 {{ search_form.as_p }}
                 <div class="d-flex justify-content-center mb-3">

@@ -120,49 +120,46 @@ def all_temps(temp):
     return all_days_temps_context
 
 '''This function is used for POST-search_form'''
-def get_cities_weather(request):
-    search_form = SearchForm(request.POST)
-    if search_form.is_valid():
-        city = search_form.cleaned_data['search_city']
-        #functions import
-        weather_data = get_current_dates(city)
-        weather_data_next_days = get_weather_next_days(city)
-        weather_conditions = get_weather_conditions()
-        sunrise_sunset_time = get_sunrise_sunset_time(city)
+def get_cities_weather(request,city):
+    search_form = SearchForm()
+    #functions import
+    weather_data = get_current_dates(city)
+    weather_data_next_days = get_weather_next_days(city)
+    weather_conditions = get_weather_conditions()
+    sunrise_sunset_time = get_sunrise_sunset_time(city)
+    
+    all_days_temp = get_all_temps(city)
+    all_days_temps_context = all_temps(all_days_temp)
+    
+    all_days_description = get_all_descriptions(city)
+    all_days_description_context = all_descriptions(all_days_description)
+    
+    all_days_time = get_all_times(city)
+    all_days_time_context = all_times(all_days_time)
+    
+    context = {
+        'city': city,
+        'search_form': search_form,
+        'weather_data_next_days': weather_data_next_days[0] if weather_data_next_days else None,
+        'day1_date': weather_data_next_days[1] if weather_data_next_days else None,
+        'day2_date': weather_data_next_days[2] if weather_data_next_days else None,
+        'day3_date': weather_data_next_days[3] if weather_data_next_days else None,
         
-        all_days_temp = get_all_temps(city)
-        all_days_temps_context = all_temps(all_days_temp)
+        'weather_data': weather_data[0] if weather_data else None,
+        'temperature': weather_data[1] if weather_data else None,
+        'min_temp': weather_data[2] if weather_data else None,
+        'max_temp': weather_data[3] if weather_data else None,
+        'humidity': weather_data[4] if weather_data else None,
+        'actual_day': weather_data[5] if weather_data else None,
         
-        all_days_description = get_all_descriptions(city)
-        all_days_description_context = all_descriptions(all_days_description)
+        'sunrise_time': sunrise_sunset_time[0] if sunrise_sunset_time else None,
+        'sunset_time': sunrise_sunset_time[1] if sunrise_sunset_time else None,
+        'actual_time': sunrise_sunset_time[2] if sunrise_sunset_time else None,
         
-        all_days_time = get_all_times(city)
-        all_days_time_context = all_times(all_days_time)
-        
-        context = {
-            'city': city,
-            'search_form': search_form,
-            'weather_data_next_days': weather_data_next_days[0] if weather_data_next_days else None,
-            'day1_date': weather_data_next_days[1] if weather_data_next_days else None,
-            'day2_date': weather_data_next_days[2] if weather_data_next_days else None,
-            'day3_date': weather_data_next_days[3] if weather_data_next_days else None,
-            
-            'weather_data': weather_data[0] if weather_data else None,
-            'temperature': weather_data[1] if weather_data else None,
-            'min_temp': weather_data[2] if weather_data else None,
-            'max_temp': weather_data[3] if weather_data else None,
-            'humidity': weather_data[4] if weather_data else None,
-            'actual_day': weather_data[5] if weather_data else None,
-            
-            'sunrise_time': sunrise_sunset_time[0] if sunrise_sunset_time else None,
-            'sunset_time': sunrise_sunset_time[1] if sunrise_sunset_time else None,
-            'actual_time': sunrise_sunset_time[2] if sunrise_sunset_time else None,
-            
-            **all_days_time_context,
-            **all_days_description_context,
-            **all_days_temps_context,
-            **weather_conditions,
-        }
-        return render(request, 'nextdaysweather.html', context)
-    else:
-        search_form = SearchForm()  
+        **all_days_time_context,
+        **all_days_description_context,
+        **all_days_temps_context,
+        **weather_conditions,
+    }
+    # return render(request, 'nextdaysweather.html', context)
+    return context
